@@ -1,4 +1,58 @@
 'use strict';
 
-var userName = prompt('Hello, what is your name?')
-console.log(userName)
+var userName = prompt('Hello, what is your name?');
+console.log('User Name: ' + userName);
+
+alert(userName + ' welcome to my page!');
+
+var whereBorn = prompt('Was I born in Seattle?');
+whereBorn = whereBorn.toLowerCase();
+console.log(userName + ' answered ' + whereBorn + ' to if I was born in Seattle.');
+
+if (whereBorn.toLowerCase() === 'yes' || whereBorn.toLowerCase() === 'y') {
+    console.log('Nailed it!');
+} else {
+    console.log('You are wrong!')
+}
+
+var whereBefore = prompt('Did I live in England before here?');
+whereBefore = whereBefore.toLowerCase();
+console.log(userName + ' answered ' + whereBefore + ' to if I lived in England before here.');
+
+if (whereBefore.toLowerCase() === 'no' || whereBefore.toLowerCase() === 'n') {
+    console.log('Perfect!');
+} else {
+    console.log('So not right!')
+}
+
+var olderBrother = prompt('Do I have an older brother?');
+olderBrother = olderBrother.toLowerCase();
+console.log(userName + ' answered ' + olderBrother + ' to if I have an older brother.');
+
+if (olderBrother.toLowerCase() === 'yes' || olderBrother.toLowerCase() === 'y') {
+    console.log('Well done!');
+} else {
+    console.log('Nope!')
+}
+
+var oldSchool = prompt('Did I go to Auckland University of Technology?');
+oldSchool = oldSchool.toLowerCase();
+console.log(userName + ' answered ' + oldSchool + ' to if I attended Auckland University of Technology.');
+
+if (oldSchool.toLowerCase() === 'yes' || oldSchool.toLowerCase() === 'y') {
+    console.log('Excellent!');
+} else {
+    console.log('Definitely not right!')
+}
+
+var oldJob = prompt('Did I work as a paramedic?');
+oldJob = oldJob.toLowerCase();
+console.log(userName + ' answered ' + oldJob + ' to if I worked as a paramedic.');
+
+if (oldJob.toLowerCase() === 'yes' || oldJob.toLowerCase() === 'y') {
+    console.log('Perfect!');
+} else {
+    console.log('Nope!')
+}
+
+alert(userName + ' thank you for playing!')
