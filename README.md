@@ -4,3 +4,7 @@
 I have added a list of my Top 10 favorite movies.
 
 I also changed both my work experience and education summary into unordered lists in HTML.
+
+Added 6th Question requiring the user to guess my favorite number.
+
+Added 7th Question requiring the user to guess the name of one of the Galilean moons.
