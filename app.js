@@ -90,6 +90,7 @@ if (oldJob.toLowerCase() === 'yes' || oldJob.toLowerCase() === 'y') {
 
 
 var guessNumber = prompt('Please guess my favorite number. You have 4 attempts.');
+guessNumber = parseFloat(guessNumber);
 
 // console.log(userName + ' answered ' + guessNumber + ' to what my favorite number is.');
 
@@ -106,26 +107,11 @@ if (guessNumber === '13') {
 
 // Io, Europa, Ganymede, Callisto are Galilean moons
 
+var nameMoon = ['io', 'europa', 'ganymede', 'callisto'];
+
 var nameMoon = prompt('Please name a Galilean moon. You have 6 attempts.');
 nameMoon = nameMoon.toLowerCase();
 // console.log(userName + ' answered ' + nameMoon + ' as a Galilean moon.');
-
-if (nameMoon.toLowerCase === '')
-
-
-
-
-
-
-
-{
-  // console.log('Perfect!');
-  alert(userName + ', well played!');
-} else {
-  // console.log('Nope!');
-  alert(userName + ', so sorry but so wrong!');
-}
-
 
 
 

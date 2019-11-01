@@ -1,10 +1,14 @@
 # About Me Game
 201 Night Class About Me Game
 
-I have added a list of my Top 10 favorite movies.
+Oct 31st Change Log:
 
-I also changed both my work experience and education summary into unordered lists in HTML.
+    I have added a list of my Top 10 favorite movies.
 
-Added 6th Question requiring the user to guess my favorite number.
+    I also changed both my work experience and education summary into unordered lists in HTML.
 
-Added 7th Question requiring the user to guess the name of one of the Galilean moons.
+    Added 6th Question requiring the user to guess my favorite number.
+
+    Added 7th Question requiring the user to guess the name of one of the Galilean moons.
+
+    Added minor styling elements to the style.css
