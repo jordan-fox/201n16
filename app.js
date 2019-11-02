@@ -1,6 +1,7 @@
 'use strict';
 
 var userName = prompt('Hello, what is your name?');
+var correctAnswers = 0;
 // console.log('User Name: ' + userName);
 
 alert(userName + ' welcome to my page!');
@@ -16,6 +17,7 @@ whereBorn = whereBorn.toLowerCase();
 if (whereBorn.toLowerCase() === 'yes' || whereBorn.toLowerCase() === 'y') {
   // console.log('Nailed it!');
   alert(userName + ', you nailed it!');
+  correctAnswers ++;
 } else {
   // console.log('You are wrong!');
   alert(userName + ', you\'re so wrong!');
@@ -32,6 +34,7 @@ whereBefore = whereBefore.toLowerCase();
 if (whereBefore.toLowerCase() === 'no' || whereBefore.toLowerCase() === 'n') {
   // console.log('Perfect!');
   alert(userName + ', what a superb answer!');
+  correctAnswers ++;
 } else {
   // console.log('So not right!');
   alert(userName + ', not even close!');
@@ -48,6 +51,7 @@ console.log(userName + ' answered ' + olderBrother + ' to if I have an older bro
 if (olderBrother.toLowerCase() === 'yes' || olderBrother.toLowerCase() === 'y') {
   // console.log('Well done!');
   alert(userName + ', well done!');
+  correctAnswers ++;
 } else {
   // console.log('Nope!');
   alert(userName + ', I disagree!');
@@ -64,6 +68,7 @@ oldSchool = oldSchool.toLowerCase();
 if (oldSchool.toLowerCase() === 'yes' || oldSchool.toLowerCase() === 'y') {
   // console.log('Excellent!');
   alert(userName + ', excellent work!');
+  correctAnswers ++;
 } else {
   // console.log('Definitely not right!');
   alert(userName + ', definitely not right!');
@@ -80,6 +85,7 @@ oldJob = oldJob.toLowerCase();
 if (oldJob.toLowerCase() === 'yes' || oldJob.toLowerCase() === 'y') {
   // console.log('Perfect!');
   alert(userName + ', truly perfect!');
+  correctAnswers ++;
 } else {
   // console.log('Nope!');
   alert(userName + ', so wrong!');
@@ -90,31 +96,66 @@ if (oldJob.toLowerCase() === 'yes' || oldJob.toLowerCase() === 'y') {
 
 
 var guessNumber = prompt('Please guess my favorite number. You have 4 attempts.');
-guessNumber = parseFloat(guessNumber);
-
+guessNumber = parseInt(guessNumber);
+var numGuesses = 3;
 // console.log(userName + ' answered ' + guessNumber + ' to what my favorite number is.');
-
-if (guessNumber === '13') {
-  // console.log('Perfect!');
-  alert(userName + ', bravo!');
-} else {
-  // console.log('Nope!');
-  alert(userName + ', read minds better!');
+while (numGuesses > 0){
+  console.log(guessNumber);
+  if (guessNumber === 13) {
+    // console.log('Perfect!');
+    correctAnswers ++;
+    numGuesses = 0;
+  } else if(guessNumber > 13) {
+    numGuesses --;
+    // console.log('Nope!');
+    guessNumber = prompt(userName + ', To high!  Guess again.');
+  } else if(guessNumber < 13){
+    numGuesses --;
+    guessNumber = prompt(userName + ', To low!  Guess again.');
+  } else {
+    guessNumber = prompt(userName + ', Must give an int!  Guess again.');
+  }
 }
+alert(userName + ', Correct answer is 13!');
+
 
 
 // SEVENTH Question
 
 // Io, Europa, Ganymede, Callisto are Galilean moons
 
-var nameMoon = ['io', 'europa', 'ganymede', 'callisto'];
+var moonArray = ['io', 'europa', 'ganymede', 'callisto'];
 
-var nameMoon = prompt('Please name a Galilean moon. You have 6 attempts.');
+var nameMoon = prompt('Please name a Galilean moon. You have 6 attempts.').toLowerCase();
 nameMoon = nameMoon.toLowerCase();
+var moonGuesses = 6;
 // console.log(userName + ' answered ' + nameMoon + ' as a Galilean moon.');
+while(moonGuesses > 0){
+  for(var i = 0; i < moonArray.length; i++){
+    if(nameMoon === moonArray[i]) {
+      alert('You are correct!');
+      correctAnswers ++;
+      moonGuesses = 0;
+    }
+  }
+  moonGuesses --;
+  console.log(moonGuesses);
+  if(moonGuesses !== 0 && moonGuesses !== -1) {
+    nameMoon = prompt('Wrong.  Try again.');
+  } else if (moonGuesses === 0) {
+    alert('Correct options are io, europa, ganymede, callisto');
+  } else if(moonGuesses === -1){
+    alert('You are right.  All possible options were io, europa, ganymede, callisto');
+  }
+}
 
 
 
 // THANK YOU ALERT
-
-alert(userName + ' thank you for playing!');
+function math(){
+  var percent = Math.round(correctAnswers/7*100);
+  console.log(correctAnswers);
+  return percent;
+}
+console.log(math());
+alert(userName + ' thank you for playing! You have answered ' + math() + ' percent correctly!');
