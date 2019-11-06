@@ -2,12 +2,12 @@
 
 var userName = prompt('Hello, what is your name?');
 var correctAnswers = 0;
-// console.log('User Name: ' + userName);
+console.log(userName);
 
 alert(userName + ' welcome to my page!');
 
 
-// FIRST QUESTION
+// // FIRST QUESTION
 
 function birthPlace(){
   var whereBorn = prompt('Was I born in Seattle?');
@@ -131,11 +131,8 @@ mindReader();
 
 // SEVENTH Question
 
-// Io, Europa, Ganymede, Callisto are Galilean moons
-
-var moonArray = ['io', 'europa', 'ganymede', 'callisto'];
-
 function galileanMoons() {
+  var moonArray = ['io', 'europa', 'ganymede', 'callisto'];
   var nameMoon = prompt('Please name a Galilean moon. You have 6 attempts.').toLowerCase();
   nameMoon = nameMoon.toLowerCase();
   var moonGuesses = 6;
@@ -161,10 +158,9 @@ function galileanMoons() {
 }
 galileanMoons();
 
-
-
 // THANK YOU ALERT
-function math(){
+
+function math() {
   var percent = Math.round(correctAnswers/7*100);
   console.log(correctAnswers);
   return percent;
