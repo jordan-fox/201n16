@@ -1,6 +1,14 @@
 # About Me Game
 201 Night Class About Me Game
 
+Nov 6th Change Log:
+
+    Added to CSS file.
+
+    Merged and edited changes from pair programming sesssion.
+
+    Finished turning var questions into function questions.
+
 Oct 31st Change Log:
 
     I have added a list of my Top 10 favorite movies.

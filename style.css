@@ -1,24 +1,48 @@
+/* Used public question and answer sections from stackoverflow.com to assist a list of css declarations */
+
 body {
     background-color: bisque;
-    margin: 25px 25px 25px 25px
+    margin: 25px 25px 25px 25px;
 }
 
-ul li {
+ul li span {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: chartreuse;
 }
 
-h2 {
-    font-size: 40px;
-}
-
 h1 {
-    font-size: 65px;
+    text-align: center;
+    font-size: 85px;
+    margin: 35px 35px 35px 35px;
 }
 
-ol li {
+
+h2 {
+    text-align: center;
+    font-size: 55px;
+    margin: 25px 25px 25px 25px;
+}
+
+ol li span {
     background-color: cyan;
 }
 
-footer {
-    font-size: 35px;
+ol li {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: upper-roman;
+    margin: 10px 10px 10px 35px;
 }
+
+footer {
+    text-align: center;
+    font-size: 35px;
+    margin: 25px 25px 25px 25px;
+}
+
+#movies {
+    margin: 25px 25px 25px 25px;
+    text-align: center;
+    font-size: 55px;
+}
+
